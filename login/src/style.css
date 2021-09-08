@@ -3,9 +3,8 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /*background: url(Water2.jpeg) no-repeat;*/
-  background-image: url("./Water2.jpeg");
-  /*background-size: cover;*/
+  background-image: url("./Water2.jpeg"); 
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .login-box{
@@ -49,10 +48,11 @@ body{
   color: black;
   text-emphasis-color: black;
   font-size: 18px;
-  width: 80%;
+  width: 82%;
   float: left;
   margin: 0 10px;
   background: linear-gradient(to right, rgb(42, 136, 212) 0%, rgb(229, 243, 250) 100%);
+  text-align: center;
 }
 .btn{
   width: 100%;

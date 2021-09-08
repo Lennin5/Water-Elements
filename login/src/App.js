@@ -3,12 +3,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div /*className="App"*/ className="login-box">
         <h1>Login</h1>
-  <div class="textbox">
-    <i class="fas fa-user"></i>
-    <input type="text" placeholder="Username" id="email"></input>
-  </div>
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="Username" id="email"></input>
+    </div>
 
   <div class="textbox">
     <i class="fas fa-lock"></i>
