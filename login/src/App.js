@@ -1,5 +1,6 @@
 import './style.css';
 import './App.css';
+import Signup from './Signup';
 
 function App() {
   return (
@@ -20,6 +21,13 @@ function App() {
     </div>
   );
 }
+
+function SU() {
+  return(
+    <Signup />
+  )
+}
+
 
 
 
