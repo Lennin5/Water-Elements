@@ -1,6 +1,6 @@
 import './style.css';
 import './App.css';
-import Signup from './Signup';
+//import Signup from './Signup';
 
 function App() {
   return (
@@ -17,18 +17,10 @@ function App() {
   </div>
   <br></br>
   
-  <input type="button" class="btn" value="Sign in" onclick="preview()"></input>
+  <input type="button" class="btni" text-color="black" value="Sign in" onclick="preview()"></input>
     </div>
   );
+  
 }
-
-function SU() {
-  return(
-    <Signup />
-  )
-}
-
-
-
 
 export default App;

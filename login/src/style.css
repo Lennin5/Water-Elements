@@ -55,7 +55,7 @@ body{
   background: linear-gradient(to right, rgb(42, 136, 212) 0%, rgb(229, 243, 250) 100%);
   text-align: center;
 }
-.btn{
+.btni{
   width: 100%;
   background: none;
   border: 4px solid #4caf50;
