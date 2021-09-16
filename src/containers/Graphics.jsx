@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Elements = () => {
+const Graphics = () => {
     return (
         <div>
-            Elements
+            Graphics
         </div>
     )
 }
 
-export default Elements
+export default Graphics

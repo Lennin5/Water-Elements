@@ -1,0 +1,23 @@
+/* General Clases */
+.div__navbar--icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+/* Not Found secion */
+.not__found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.btn-water{
+	border-radius: 20px; 
+	
+	color: #ffffff;
+	background-color: #00AF9C;
+}
+.btn-water:hover{
+	color: #ffffff;	
+}
