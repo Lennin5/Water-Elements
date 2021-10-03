@@ -1,4 +1,11 @@
 /* General Clases */
+.line{
+    border: 1px solid red;
+}
+.background-primary{
+    background-color: #00AF9C;
+    /* background: linear-gradient(90deg, #ffffff 50%, #00AF9C 50%); */
+}
 .div__navbar--icon{
     display: flex;
     justify-content: center;
@@ -14,10 +21,73 @@
 
 .btn-water{
 	border-radius: 20px; 
-	
 	color: #ffffff;
 	background-color: #00AF9C;
 }
 .btn-water:hover{
 	color: #ffffff;	
 }
+
+.btn-water-light{
+  width: 40%;
+  border: 1px solid #00AF9C;
+	border-radius: 10px; 
+	color: #00AF9C;
+	background-color: #FFFFFF;
+  outline: none;
+}
+.btn-water-light:hover{
+	color: #00AF9C;	
+}
+.btn-water-light:focus{
+    border-color: none;
+    box-shadow: none;
+}
+
+/* Login */
+
+.card{
+    border: none;
+    border-radius: 10px;
+    -webkit-box-shadow:  3px 3px 10px 0px #a5a5a523;
+    -moz-box-shadow:  3px 3px 10px 0px #a5a5a523;
+    -o-box-shadow: 3px 3px 10px 0px #a5a5a523;
+    -ms-box-shadow: 3px 3px 10px 0px #a5a5a523;
+}
+.card-component{
+    width: "80%";    
+    border-radius: 20px;
+    padding: 10px;
+    /* -webkit-box-shadow:  5px 5px 10px 0px #a5a5a575;
+    -moz-box-shadow:  5px 5px 10px 0px #a5a5a575;
+    -o-box-shadow: 5px 5px 10px 0px #a5a5a575;
+    -ms-box-shadow: 5px 5px 10px 0px #a5a5a575;     */
+    /* background: linear-gradient(90deg, #ffffff 50%, #00AF9C 50%); */
+}
+
+.form-control{
+  width: 80%;
+    outline: none;
+    color: #ffffff !important;
+    border-radius: 9px;
+    border: 2px solid #ffffff;
+    background-color: #00AF9C !important;    
+}
+.form-control:focus {
+    border-color: #ffffff;
+    box-shadow: none;
+} 
+.icon-component{
+    color: #FFFFFF !important;   
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FFF !important;
+    opacity: 1; /* Firefox */
+  }
+
+
+
+  
+
+
+

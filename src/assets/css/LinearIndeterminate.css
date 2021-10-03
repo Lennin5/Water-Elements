@@ -1,0 +1,79 @@
+
+
+.loader-temp-container {
+    width: 100%;
+  }
+
+.pg-load-bar-wrapper {
+background: #85fff162;
+height: 7px;
+position: relative;
+width: 100%;
+max-width: 950px;
+/* margin: 10% auto; */
+overflow: hidden;
+animation: start 0.3s ease-in;
+border-radius: 35px;
+}
+
+.bar {
+    background: #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.bar1 {
+    animation: progressLinearMovement 2.5s ease infinite;
+    animation-delay: 0.25s;
+}
+
+.bar2 {
+    left: -100%;
+    animation: progressLinearMovement 2.5s infinite;
+    animation-delay: 1.15s;
+    
+}
+
+  
+  .pg-stop-animation {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  @keyframes progressLinearMovement {
+    0% {
+      opacity: 1;
+      left: -100%;
+    }
+  
+    50% {
+      opacity: 1;
+      left: 100%;
+    }
+  
+    100% {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  @keyframes progressLinearMovementLeftToRight {
+    0% {
+      opacity: 1;
+      left: 100%;
+    }
+  
+    50% {
+      opacity: 1;
+      left: -100%;
+    }
+  
+    100% {
+      opacity: 0;
+      left: -100%;
+    }
+  }

@@ -1,0 +1,24 @@
+.iconos{
+	width: 10%;
+	transition: all 0.7s ease;
+}
+.iconos:hover{
+	transform: scale(1.2);
+}
+.iconosDiv{
+	text-align: center;
+}
+.footer{
+	background: #2C2A40;
+	padding: 1%;
+	margin-top: 15% !important;
+}
+.enlaceFooter{
+	margin: 12px;	
+}
+.informationFooter{
+	margin-top: 10px;
+    text-align: center;
+	color: white;
+	font-size: 22px;
+}

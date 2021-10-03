@@ -1,14 +1,18 @@
 import '../assets/css/Navbar.css';
 import React , { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import $ from 'jquery';
 
+import { auth } from "../utils/FirebaseConfiguration"
+
 import Logo from "../assets/img/logo.png"
+import { useAuthContext } from '../context/AuthContext';
 import UserExist from './UserExist';
 
 const Navbar = () => {  
 
-  const userExist = UserExist();
+  const userExist = UserExist();  
+  const { logOut } = useAuthContext();
 
   function animation(){
     var tabsNewAnim = $('#navbarSupportedContent');
@@ -46,8 +50,11 @@ const Navbar = () => {
     });    
   }, []);
 
+  const Logout = async () => {
+    await logOut('navlink-home');    
+  }
+
   return (
-    
   <nav className="navbar navbar-expand-lg navbar-mainbg pt-1">
     
       <Link to='#' className="pl-1 navbar-brand navbar-brand-logo-light" style={{ marginTop: -1, fontWeight: "bold", fontSize: 25,}}>
@@ -60,12 +67,13 @@ const Navbar = () => {
         onClick={ function(){
           setTimeout(function(){ animation(); });
         }}
+        style={{visibility: userExist ? "initial" : "hidden"}}
         type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i className="fas fa-bars text-white"></i>
       </button>
  
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ml-auto" hidden={userExist ? "true" : "false"}>
+        <ul className="navbar-nav ml-auto" style={{visibility: userExist ? "initial" : "hidden"}}>
             
             <div className="hori-selector">
               <div className="left"></div>
@@ -74,7 +82,7 @@ const Navbar = () => {
 
 
             <li className="nav-item active">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/" id="navlink-home">
                 <div className="div__navbar--icon">
                   <section>
                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-house-fill pr-2" viewBox="0 0 16 16">
@@ -127,8 +135,8 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="nav-item">            
-              <Link className="nav-link" to="#" onClick={()=>console.log("Close Sesion")}>
+            <li className="nav-item" onClick={Logout}>
+              <Link className="nav-link" to="#">
                 <div className="div__navbar--icon">
                   <section>
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-box-arrow-in-right pr-2" viewBox="0 0 16 16">
@@ -136,13 +144,13 @@ const Navbar = () => {
                       <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
                     </svg>
                   </section>
-                  <section>Cerrar Sesión</section>
+                  <section>Cerrar Sesión</section>               
                 </div>
               </Link>
             </li>
-        </ul>
-      </div>
-  </nav>
+        </ul>        
+      </div>      
+  </nav>  
   )
 }
 export default Navbar;
